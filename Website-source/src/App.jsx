@@ -42,7 +42,7 @@ const SOLUTIONS = [
     description:
       'A full point-of-sale system that works without internet — every sale is saved locally and syncs when back online. Supports M-Pesa STK Push, Pochi la Biashara, thermal receipt printing, KRA eTIMS, AI invoice scanning, and multi-staff PIN login. Runs on any Android phone.',
     tags: ['React PWA', 'FastAPI', 'SQLAlchemy', 'Dexie.js', 'M-Pesa', 'KRA eTIMS'],
-    liveUrl: 'https://dzeline.online',
+    liveUrl: 'https://app.dzelineshop.com',
     quoteHref: '#book',
     developerHref: '#experience',
     status: 'Live',
@@ -346,7 +346,7 @@ function Solutions() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-white text-sm font-bold hover:bg-primary-dark transition shadow-md shadow-primary/20"
                 >
-                  Visit dzeline.online <ExternalIcon />
+                  Visit {new URL(s.liveUrl).host} <ExternalIcon />
                 </a>
               )}
               {s.quoteHref && (
@@ -956,7 +956,7 @@ function Footer() {
         <div className="flex items-center gap-4">
           <a href="https://github.com/Dzeline" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">GitHub</a>
           <a href="https://wa.me/254708174289" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">WhatsApp</a>
-          <a href="https://dzeline.online" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">Dzeline Shop</a>
+          <a href="https://app.dzelineshop.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">Dzeline Shop</a>
         </div>
       </div>
     </footer>
