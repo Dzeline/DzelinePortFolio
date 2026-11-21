@@ -2,6 +2,18 @@ import { useState, useEffect } from 'react'
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
 
+// The Dzeline logo for a dark background: public/brand/dzeline-logo-dark.svg
+// without its square, so it sits on the nav whether that is clear or blurred.
+const LogoMark = ({ className = '' }) => (
+  <svg className={className} viewBox="0 0 120 120" aria-hidden="true">
+    <path d="M108 96 H22 V28 H54 C78 28 92 46 92 64 C92 80 84 90 72 96" fill="none" stroke="#38B6FF" strokeWidth="10" strokeLinejoin="round" strokeLinecap="round" />
+    <path d="M36 44 H64 L36 84 H62" fill="none" stroke="#FFFFFF" strokeWidth="7" strokeLinejoin="round" strokeLinecap="round" />
+    <path d="M49 38 V90" fill="none" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
+    <path d="M68 60 H80 A6.5 6.5 0 1 0 77 66" fill="none" stroke="#FFFFFF" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="49" cy="15" r="6" fill="#FFFFFF" />
+  </svg>
+)
+
 const WhatsAppIcon = () => (
   <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -167,8 +179,8 @@ function Nav() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-navy/95 backdrop-blur-sm border-b border-border shadow-xl' : 'bg-transparent'}`}>
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="font-black text-xl tracking-tight">
-          <span className="text-primary">D</span><span className="text-white">K</span>
+        <a href="#" aria-label="Dzeline - back to the top" className="rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+          <LogoMark className="w-10 h-10" />
         </a>
 
         {/* Desktop links */}
